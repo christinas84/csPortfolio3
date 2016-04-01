@@ -1,0 +1,906 @@
+﻿@model csPortfolio3.Models.Contact
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Parallax HTML One-Page Template for Agency and Personal">
+    <meta name="author" content="The Develovers">
+    <!-- Styles -->
+    <link href="~/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="~/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/assets/css/main.css" rel="stylesheet">
+    <link href="~/Content/SyntaxHighlighter/shCore.css" rel="stylesheet" />
+    <link href="~/Content/SyntaxHighlighter/shThemeDefault.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="~/assets/ico/favicon.png">
+</head>
+<body id="top" class="fullscreen-image-background">
+    <!-- NAVBAR -->
+    <div class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                    <span class="sr-only">Menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                    <img src="~/assets/img/minion2.png" alt="Kevin"/>
+                </a>
+            </div>
+            <nav class="navbar-collapse collapse" id="main-nav" role="navigation">
+                <ul class="nav navbar-nav navbar-right nav-text-light">
+                    <li class="active"><a href="#top">HOME</a></li>
+                    <li><a href="#about">ABOUT ME</a></li>
+                    <li><a href="#resume">RESUME</a></li>
+                    <li><a href="#works">PORTFOLIO</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#contact">CONTACT ME</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- END NAVBAR -->
+    <!-- HERO UNIT -->
+    <div id="hero-unit" class="hero-unit has-overlay">
+        <div class="hero-content text-right">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-lg-offset-5">
+                        <div id="slidecaption" class="slide-caption">
+                            <div class="hero-text">
+                                <h2 class="hero-heading">HI I'M, <span class="name">CHRISTINA</span></h2>
+                                <div data-looper="go" data-interval="3000" class="looper slide down">
+                                    <div class="looper-inner">
+                                        <div class="item animated"><p>WEB DEVELOPER</p></div>
+                                        <div class="item animated"><p>ARTIST</p></div>
+                                        <div class="item animated"><p>COFFEE ADDICT</p></div>
+                                        <div class="item animated"><p>ANIMAL LOVER</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-buttons">
+                            <a href="#about" id="btn-about" class="btn btn-outline btn-lg"><i class="fa fa-arrow-circle-o-down"></i> READ MORE</a>
+                            <a href="#contact" id="btn-contact" class="btn btn-primary btn-lg"><i class="fa fa-phone-square"></i> GET IN TOUCH</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END HERO UNIT -->
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="main-content">
+        <!-- ABOUT -->
+        <div id="about" class="section about">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>ABOUT ME</h2>
+                    <p>A great beginning to know me</p>
+                    <hr />
+                </div>                
+                </div>
+                <div class="section-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h3>Currently</h3>
+                                <p>Student at Coder Foundry learning full-stack programming concepts. At completion will be equipped to contribute to a web development team on day one.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h3>Key areas of experience include</h3>
+                                <p>HTML, CSS, JavaScript, jQuery, Bootstrap, AngularJS, SQL server, MVC, Asp.NET, and C#.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h3>What's Next</h3>
+                                <p>Looking forward to working as a full-stack developer in the RTP area. If you're interested, my recents projects are listed below.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- END ABOUT -->
+        <!-- FULL-WIDTH PARALLAX -->
+        <div id="social-network" class="section full-width-parallax parallax">
+            <div class="container">
+                <h2>Find me elsewhere in the web</h2>
+                <ul class="list-inline social-icon">
+                    <li class="wow rollIn" data-wow-delay='0.3s'><a href="https://plus.google.com/110608442787450458920/posts/p/pub" data-toggle="tooltip" data-placement="bottom" title="Google-Plus"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="wow rollIn" data-wow-delay='0.3s'><a href="https://github.com/christinas84" data-toggle="tooltip" data-placement="bottom" title="Github"><i class="fa fa-github"></i></a></li>
+                    <li class="wow rollIn" data-wow-delay='0.3s'><a href="https://www.linkedin.com/in/christina-simmons-8859b1113" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- END FULL-WIDTH PARALLAX -->
+        <!-- SKILLS CHART -->
+        <div id="skills" class="section skills">
+            <h3>There's nothing like knowing you have a real opportunity to affect the future in a positive way. ~Tisha Johnson</h3>
+        </div>
+        <!-- END SKILLS CHART -->
+    <!-- Section: Resume -->
+    <section id="resume" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="section-heading">
+                    <h2>RESUME</h2>
+                    <p>Education and Experience</p>
+                    <hr />
+                </div>
+                <!-- Section header -->
+                <div class="col-md-3">
+                </div>
+                <!-- /Section header -->
+                <!-- Section content -->
+                <div class="col-md-6 animation" data-animation="fadeInRight">
+                    <div class="row text-justify">
+                        <!-- Education -->
+                        <div class="col-md-12">
+                            <!-- Information icon -->
+                            <div class="resume-icon rounded text-center">
+                                <i class="fa fa-graduation-cap fa-2x"></i>
+                            </div>
+                            <!-- /Information icon -->
+                            <div class="resume-information">
+                                <!-- Information block -->
+                                <div class="resume-information-block">
+                                    <h3 class="resume-title">Coder Foundry</h3>
+                                    <span class="resume-date">January 2016 - Present</span>
+                                    <p>Currently at coder foundry learning the skills needed to become a full stack developer. Upon completion I will have over 1000 hours programming experience. I will have skills in HTML, CSS, JavaScript, jQuery, Twitter Bootstrap, AngularJS, SQL, MVC, C#, and ASP.Net
+                                    </p>
+                                </div>
+                                <!-- /Information block -->
+                                <!-- Information block -->
+                                <div class="resume-information-block">
+                                    <h3 class="resume-title">Western Carolina University</h3>
+                                    <span class="resume-date">2003-2006</span>
+                                    <p>A coeducational public university location in Cullowhee, North Carolina. I graduated in December 2006 with a dual Bachelor's degree in Criminal Justice and Emergency Management.
+                                    </p>
+                                </div>
+                                <!-- /Information block -->
+                            </div>
+                        </div>
+                        <!-- /Education -->
+                        <!-- Experience -->
+                        <div class="col-md-12 resume-right">
+                            <!-- Information icon -->
+                            <div class="resume-icon rounded text-center">
+                                <i class="fa fa-suitcase fa-2x"></i>
+                            </div>
+                            <!-- /Information icon -->
+                            <div class="resume-information">
+                                <!-- Information block -->
+                                <div class="resume-information-block">
+                                    <h3 class="resume-title">Holly Springs Police Department</h3>
+                                    <span class="resume-date">2012-2015</span>
+                                    <p>As a telecommunicator/dispatcher for the Town of Holly Springs I answered administrative and 911 phone lines. Dispatched officers to calls for services. Documented officers daily acitivities including calls for service, vehicle stops and officer intiated field contacts. Resolved citizens issues or referred them to the correct solution. Entered into the north carolina system missing persons, articles, vehicles, and items.
+                                    </p>
+                                </div>
+                                <!-- /Information block -->
+                                <!-- Information block -->
+                                <div class="resume-information-block">
+                                    <h3 class="resume-title">North Carolina State Highway Patrol</h3>
+                                    <span class="resume-date">2007-2012</span>
+                                    <p>Working with the NCSHP as a patrol telecommunicator I dispatched troopers to calls for service, maintained a daily log of troopers activities and assisted troopers with DCI inquiries when needed. Did broadcasts to alert troopers of suspects in the area or bad drivers
+                                    </p>
+                                </div>
+                                <!-- /Information block -->
+                                <!-- Information block -->
+                                <div class="resume-information-block">
+                                    <h3 class="resume-title">North Carolina Department of Corrections</h3>
+                                    <span class="resume-date">2010-2011</span>
+                                    <p>Working with the NC Dept. of Corrections I updated, validated, submitted, and documented warrants for the state of North Carolina. Was considered a resource for probation/parole officers, local and out of state law enforcement officers and federal officials dealing with absconders.
+                                    </p>
+                                </div>
+                                <!-- /Information block -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Section content -->
+            </div>
+        </div>
+    </section>
+    <!-- /Section: Resume -->       
+        <!-- WORKS -->
+        <div id="works" class="section works">
+            <div class="section-heading">
+                <h2>WORKS</h2>
+                <p>The best thing is when our work become part of client success</p>
+                <hr />
+            </div>
+            <div class="section-content">
+                <ul class="list-inline work-item-filters">
+                    <li><a class="active" href="#" data-filter="*">ALL</a></li>
+                    <li><a href="#" data-filter=".javaScript">JavaScript</a></li>
+                    <li><a href="#" data-filter=".jQuery">jQuery</a></li>
+                    <li><a href="#" data-filter=".mVc">MVC</a></li>
+                    <li><a href="#" data-filter=".angularJs">AngularJS</a></li>
+                </ul>
+
+                <div class="work-item-wrapper">
+                    <ul class="work-item-list list-col-4">
+                        <li class="work-item javaScript">
+                            <img src="~/assets/img/portfolio/work1.jpg" alt="This is the description">
+                                    <div href="#portfolioModal1" class="portfolio-link image-overlay" data-toggle="modal">
+                                        <div class="work-item-info">
+                                            <h3>JavaScript Exercises</h3>
+                                            <p>4 JavaScript/jQuery projects</p>
+                                            <i class="fa fa-search-plus"></i>
+                                        </div>
+                            </div>
+                        </li>
+                        <li class="work-item mVc">
+                            <img src="~/assets/img/portfolio/work2.jpg" alt="This is the description">
+                            <div href="#portfolioModal2" class="portfolio-link image-overlay" data-toggle="modal">
+                                <div class="work-item-info">
+                                    <h3>Blog</h3>
+                                    <p>Using MVC and SQL</p>
+                                    <i class="fa fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="work-item mVc">
+                            <img src="~/assets/img/portfolio/work3.jpg" alt="This is the description">
+                            <div href="#portfolioModal3" class="portfolio-link image-overlay" data-toggle="modal">
+                                <div class="work-item-info">
+                                    <h3>Bug Tracker</h3>
+                                    <p>Using SQL and MVC</p>
+                                    <i class="fa fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="work-item mVc">
+                            <img src="~/assets/img/portfolio/work4.jpg" alt="This is the description">
+                            <div href="#portfolioModal2" class="portfolio-link image-overlay" data-toggle="modal">
+                                <div class="work-item-info">
+                                    <h3>Budget Program</h3>
+                                    <p>Using MVC and SQL</p>
+                                    <i class="fa fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="work-item angularJs">
+                            <img src="~/assets/img/portfolio/work5.jpg" alt="This is the description">
+                            <div href="#portfolioModal2" class="portfolio-link image-overlay" data-toggle="modal">
+                                <div class="work-item-info">
+                                    <h3>Car Finder</h3>
+                                    <p>Built using AngularJS</p>
+                                    <i class="fa fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="work-item javaScript jQuery">
+                            <img src="~/assets/img/portfolio/work6.jpg" alt="This is the description">
+                            <div href="#portfolioModal6" class="portfolio-link image-overlay" data-toggle="modal">
+                                <div class="work-item-info">
+                                    <h3>Extra Projects</h3>
+                                    <p>Projects built to learn</p>
+                                    <i class="fa fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="work-item mVc">
+                            <img src="~/assets/img/portfolio/work7.jpg" alt="This is the description">
+                            <div href="#portfolioModal7" class="portfolio-link image-overlay" data-toggle="modal">
+                                <div class="work-item-info">
+                                    <h3>Mash Game</h3>
+                                    <p>Childhood game made using SQL and MVC</p>
+                                    <i class="fa fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="work-item design">
+                            <img src="~/assets/img/portfolio/work8.jpg" alt="This is the description">
+                            <div href="#portfolioModal8" class="portfolio-link image-overlay" data-toggle="modal">
+                                <div class="work-item-info">
+                                    <h3>The Guitar</h3>
+                                    <p>Work item brief description</p>
+                                    <i class="fa fa-search-plus"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <!-- END WORKS -->
+    <!-- CONTACT -->
+    <div id="contact" class="section contact">
+        <div class="section-heading">
+            <h2>GET IN TOUCH</h2>
+            <p>Have questions or just want to contact me, go ahead!</p>
+            <hr />
+        </div>
+        <div class="section-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-info">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="fa fa-globe pull-left"></i>
+                                    <h3>Address</h3>
+                                    <p>105 Arbor Dr.<br />Elon,NC 27244</p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone pull-left"></i>
+                                    <h3>Phone</h3>
+                                    <p>(919)412-0997</p>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope pull-left"></i>
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:cesimmons84@gmail.com">cesimmons84@gmail.com</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+@using (Html.BeginForm("Create", "Contact", FormMethod.Post)){
+    @Html.AntiForgeryToken()
+                    <div class="col-md-8">
+                        <div class="contact-form">
+                            <div class="alert"></div>
+                            <form id="contact-form" method="post" role="form" novalidate>
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "NAME *" } })
+                                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "EMAIL *" } })
+                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", placeholder = "PHONE *" } })
+                                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                                </div>
+                                <div class="form-group">
+                                    @Html.TextAreaFor(model => model.Message, htmlAttributes: new { @class = "form-control", placeholder = "YOUR MESSAGE *" })
+                                    @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg" id="submit-button">
+                                    <i class="fa loading-icon"></i> <span>Send Message</span>
+                                </button>
+                                <input type="hidden" name="msg-submitted" id="msg-submitted" value="true">
+                            </form>
+                        </div>
+                    </div>
+}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTACT -->
+    <!-- END MAIN CONTENT -->
+    <!-- FOOTER -->
+    <footer id="footer" class="section">
+        <div class="container">
+            <p>Made with <span class="fa fa-code"></span> by Christina</p>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+    <div class="back-to-top">
+        <a href="#top"><i class="fa fa-angle-up"></i></a>
+    </div>
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>JavaScript/jQuery Projects</h2>
+                            <p class="item-intro text-muted">Below are 4 projects highlighting JavaScript and jQuery</p>
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-6 portfolio-item">
+                                        <a href="#fizzBuzzModal1" class="portfolio-link" data-toggle="modal">
+                                            <img src="~/assets/img/js-exercises.jpg" class="img-responsive" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 portfolio-item">
+                                        <a href="#palindromeModal1" class="portfolio-link" data-toggle="modal">
+                                            <img src="~/assets/img/js-exercises.jpg" class="img-responsive" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 portfolio-item">
+                                        <a href="#factorialModal1" class="portfolio-link" data-toggle="modal">
+                                            <img src="~/assets/img/js-exercises.jpg" class="img-responsive" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 portfolio-item">
+                                        <a href="#calculatorModal1" class="portfolio-link" data-toggle="modal">
+                                            <img src="~/assets/img/js-exercises.jpg" class="img-responsive" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FizzBuzz Modal-->
+    <div class="portfolio-modal modal fade" id="fizzBuzzModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" id="modalbutton" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="fizzBuzzModal1">FizzBuzz</h4>
+            </div>
+            <div class="modal-body">
+                <!--<div class="container">-->
+                <div class="row">
+                    <div class="col-sm-6" style="color: black; font-size: 20px;">
+                        <p style="text-align: center;">Enter a number between 1 - 100.<br> A list will be displayed from 1 to the number you choose. A number will Fizz if it is divisible by 3, Buzz if it is divisible by 5, and FizzBuzz if it is divisible by 3 and 5.</p>
+                        <input class="inputBox" min="1" max="100" type="number" name="number">
+                        <button class="fizzBuzzBtn">Try it!</button>
+                        <div class="resetButton">
+                            <button type="reset" class="clearList">Reset</button>
+                        </div>
+                        <p class="fizzbuzz"></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <pre class="brush: js">
+                                var i = 1
+			                    while (i <= num) {
+				                    if ((i % 3 == 0) && (i% 5 == 0)) {
+					                    $('.fizzbuzz').append('<li>FizzBuzz</li>');
+				                    } else if (i % 3 == 0) {
+					                    $('.fizzbuzz').append('<li>Fizz</li>');
+				                    } else if (i % 5 == 0) {
+					                    $('.fizzbuzz').append('<li>Buzz</li>');
+				                    } else {
+					                    $('.fizzbuzz').append('<li>' + i + '</li>');
+				                    }
+				                    i++
+		                      }                                          
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <a href="http://christinas84.github.io/Fizz-Buzz-Refactor" button type="button" target="_blank" class="btn btn-default">Demo</a>
+            </div>
+        </div>
+    </div>
+    <!--Palindrome Modal-->
+    <div class="portfolio-modal modal fade" id="palindromeModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" id="modalbutton" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="palindromeModal1">Palindrome</h4>
+            </div>
+            <div class="modal-body">
+                <!--<div class="container">-->
+                <div class="row">
+                    <div class="col-sm-6" style="color: black; font-size: 20px;">
+                        <h1>Enter any word:</h1>
+                        <input type="text" id="text1">
+                        <input type="submit" id="submit1" value="Check">
+                        <button type="reset" id="reset">Clear</button>
+                        <p id="answer"></p>
+                    </div>
+                    <div class="col-sm-6">
+                        <pre class="brush: js">
+                                    for(var j=i; j>=0; j--){
+                                    revString = revString + inpString.charAt(j);
+                                }
+                                if(inpString === revString) {
+                                    document.getElementById("answer").innerHTML = inpString+" is a palindrome";
+                                } else {
+                                    document.getElementById("answer").innerHTML = inpString+" is not a palindrome";
+                                }
+                         }                                          
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <a href="http://christinas84.github.io/Palindrome" button type="button" target="_blank" class="btn btn-default">Demo</a>
+            </div>
+        </div>
+    </div>
+    <!--Factorial Modal-->
+    <div class="portfolio-modal modal fade" id="factorialModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" id="modalbutton" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="factorialModal1">Factorial</h4>
+            </div>
+            <div class="modal-body">
+                <!--<div class="container">-->
+                <div class="row">
+                    <div class="col-sm-6" style="color: black; font-size: 20px;">
+                        <h1>Factorial Problem</h1>
+                        <br>
+                        Enter any number : <input type="number" min="1" id="fact1"><br><br>
+                        <div id="result"></div>
+                        <input type="button" id="go" value="Calculate">
+                        <button type="reset" id="reset1">Clear</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <pre class="brush: js">
+                                function fact(n){
+                                    var m=1;
+                                    while(n){
+                                         m=m*n;
+                                         n--;
+                                    }
+                                    var el = document.getElementById('result'); 
+                                    el.innerHTML = "Factorial of given number :"+" "+ m;
+                                    }                                                                   </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <a href="http://christinas84.github.io/Factorial/" button type="button" target="_blank" class="btn btn-default">Demo</a>
+            </div>
+        </div>
+    </div>
+    <!--Calculator Modal-->
+    <div class="portfolio-modal modal fade" id="calculatorModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" id="modalbutton" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="calculatorModal1">Min Sum Value Problem</h4>
+            </div>
+            <div class="modal-body">
+                <!--<div class="container">-->
+                <div class="row">
+                    <div class="col-sm-6" style="color: black; font-size: 20px;">
+                        <h1>Min Sum Value Problem</h1> Enter 5 numbers with spaces in between each:
+                        <input type="text" id="qty">
+                        <input type="button" id="go1" value="Calculate">
+                        <button type="reset" id="reset2">Clear</button>
+                        <div id="result1"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <pre class="brush: js">
+                                  var minValue = Math.min.apply(null, numArray);
+                                  var maxValue = Math.max.apply(null, numArray);
+                                  var sumValue = numArray.reduce(function(previous, current) { return previous + current });
+                                  var productValue = numArray.reduce(function(previous, current) { return previous * current });
+                                  var meanValue = numArray.reduce(function(previous, current) { return previous + current / numArray.length });  
+                                  }                                          
+                       </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <a href="http://christinas84.github.io/min-sum/" button type="button" target="_blank" class="btn btn-default">Demo</a>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Car Finder</h2>
+                            <p class="item-intro">This project was created using Web API's, SQL, and AngularJS<p />
+                            <img class="img-responsive img-centered" src="~/assets/img/banner-car.jpg" alt="">
+                            <p class="item-intro">
+                                This car finder application provides the user with the most accurate information utilizing the
+                                National Highway Traffic Safety Administration Recall API and the Bing Image Search API. The user will be asked to
+                                select the year make model and trim of the desired vehicle. Once the user clicks the "View" button for the vehicle
+                                selected a modal will pop up displaying that particular vehicles details, image and recalls (if any).
+                            </p>
+                            <p class="item-intro"><a href="http://csimmons-carfinder.azurewebsites.net/" target="_blank">Click Here to see the Car Finder</a></p><br /><br />
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i></i>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="~/assets/img/treehouse-preview.png" alt="">
+                            <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="~/assets/img/golden-preview.png" alt="">
+                            <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Project Name</h2>
+                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <img class="img-responsive img-centered" src="~/assets/img/escape-preview.png" alt="">
+                            <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
+                            <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>JavaScript/jQuery Projects</h2>
+                            <p class="item-intro text-muted">Below are 4 extra projects I created as practice</p>
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-6 portfolio-item">
+                                        <a href="#bonsaiModal1" class="portfolio-link" data-toggle="modal">
+                                            <img src="~/assets/img/jQurery.png" class="img-responsive" alt="Bonsai">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 portfolio-item">
+                                        <a href="#shoppinglistModal1" class="portfolio-link" data-toggle="modal">
+                                            <img src="~/assets/img/js-exercises.jpg" class="img-responsive" alt="Shopping List">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 portfolio-item">
+                                        <a href="#nascarModal1" class="portfolio-link" data-toggle="modal">
+                                            <img src="~/assets/img/js-exercises.jpg" class="img-responsive" alt="Nascar Quiz">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 portfolio-item">
+                                        <a href="#streetfighterModal1" class="portfolio-link" data-toggle="modal">
+                                            <img src="~/assets/img/jQurery.png" class="img-responsive" alt="StreetFighter">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i></i>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--1st modal extra projects | bonsai-->
+    <div class="portfolio-modal modal fade" id="bonsaiModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Bonsai</h2>
+                            <p class="item-intro">This project was created using jQuery, HTML, and CSS.<p />
+                            <img class="img-responsive img-centered" src="~/assets/img/cat_code.jpg" alt="">
+                            <p class="item-intro">
+                                Bonsai is a meme generator I created with CodeCademy. With Bonsai the user can choose any image by providing a URL link for the image and create the text displayed on the image top and bottom.
+                            </p>
+                            <p class="item-intro text-muted"><a href="http://christinas84.github.io/bonsai/bonsai" target="_blank">Click Here to see Bonsai</a></p><br /><br />
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i></i>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--2nd modal extra projects | shopping list-->
+    <div class="portfolio-modal modal fade" id="shoppinglistModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Shopping List</h2>
+                            <p class="item-intro">This project was created using JavaScript, HTML, and CSS.<p />
+                            <img class="img-responsive img-centered" src="~/assets/img/sl2.png" alt="">
+                            <p class="item-intro">
+                                This shopping list application allows the user to add, edit, and delete items on their shopping list. I used JavaScript in this project to provide these functionalities.
+                            </p>
+                            <p class="item-intro text-muted"><a href="http://christinas84.github.io/SL-2" target="_blank">Click Here to see the Shopping List</a></p><br /><br />
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i></i>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--3rd modal extra projects | nascar quiz-->
+    <div class="portfolio-modal modal fade" id="nascarModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Nascar Quiz</h2>
+                            <p class="item-intro">This project was created using JavaScript, HTML, and CSS.<p />
+                            <img class="img-responsive img-centered" src="~/assets/img/nascar_image.jpg" alt="">
+                            <p class="item-intro">
+                                I created this Nascar Quiz for my Father who has been a Nascar fan as long as I can remember. With this quiz the user will select answers for all the questions, submit the answers, and an alert box will appear with the quiz results. I used JavaScript to validate the user answered all the questions and to score the quiz.
+                            </p>
+                            <p class="item-intro text-muted"><a href="http://christinas84.github.io/nascar-quiz" target="_blank">Click Here take the Nascar Quiz</a></p><br /><br />
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i></i>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--4th modal extra projects | street fighter-->
+    <div class="portfolio-modal modal fade" id="streetfighterModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>StreetFighter</h2>
+                            <p class="item-intro">This project was created using jQuery, HTML, and CSS.<p />
+                            <img class="img-responsive img-centered" src="~/assets/img/SF_Logo.png" alt="">
+                            <p class="item-intro">
+                                StreetFighter was created to learn jQuery. The user can make Ryu throw a Hadouken, jump up and down in place, and strike his cool pose using the mouse or keyboard. In this project the jQuery functions mousedown, mouseup, keydown, keyup, mouseenter, mouseleave, hide, show, fadeIn and fadeOut were used to make the application interactive.
+                            </p>
+                            <p class="item-intro text-muted"><a href="http://christinas84.github.io/jquery-streetfighter" target="_blank">Click Here to see StreetFighter</a></p><br /><br />
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i></i>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JAVASCRIPT -->
+    <script src="~/assets/js/jquery-2.1.0.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/plugins/scrollto/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script src="~/assets/js/plugins/scrollto/jquery.localscroll-1.2.7-min.js"></script>
+    <script src="~/assets/js/plugins/easing/jquery.easing.min.js"></script>
+    <script src="~/assets/js/plugins/parallax/jquery.parallax-1.1.3.js"></script>
+    <script src="~/assets/js/plugins/jpreloader/jpreloader.min.js"></script>
+    <script src="~/assets/js/plugins/isotope/imagesloaded.pkgd.js"></script>
+    <script src="~/assets/js/plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/assets/js/plugins/wow/wow.js"></script>
+    <script src="~/assets/js/plugins/waypoints/waypoints.min.js"></script>
+    <script src="~/assets/js/plugins/parsley/parsley.min.js"></script>
+    <script src="~/assets/js/plugins/easypiechart/jquery.easypiechart.min.js"></script>
+    <script src="~/assets/js/plugins/magnific/jquery.magnific-popup.min.js"></script>
+    <script src="~/assets/js/plugins/looper/looper.min.js"></script>
+    <script src="~/assets/js/loop.js"></script>
+    <!--JavaScript Exercises-->
+    <script src="~/JavaScriptExercises/calculator.js"></script>
+    <script src="~/JavaScriptExercises/factorial.js"></script>
+    <script src="~/JavaScriptExercises/fizzBuzz.js"></script>
+    <script src="~/JavaScriptExercises/palindrome.js"></script>
+    <!--Syntax Highlighter-->
+    <script src="~/Scripts/SyntaxHighlighter/shCore.js"></script>
+    <script src="~/Scripts/SyntaxHighlighter/shBrushJScript.js"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+</body>
+</html>
