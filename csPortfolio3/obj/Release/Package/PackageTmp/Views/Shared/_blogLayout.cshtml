@@ -1,0 +1,82 @@
+﻿@using Microsoft.AspNet.Identity
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/assets/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-social.css" rel="stylesheet" />
+    <link href="~/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/assets/css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,700' rel='stylesheet' type='text/css'>
+    @*<link rel="shortcut icon" href="~/assets/img/1454690561.ico">*@
+    <link rel="icon" type="image/png" href="~/assets/img/1454688627.ico">
+</head>
+ <!-- NAVBAR -->
+<body>
+        <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Menu</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="@Url.Action("Index", "Home")" class="navbar-brand">
+                        <img src="~/assets/img/butterfly.png" />
+                    </a>
+                </div>
+
+                <nav class="navbar-collapse collapse" id="main-nav" role="navigation">
+                    @Html.Partial("_LoginPartial")
+                    <ul class="nav navbar-nav navbar-right nav-text-light">
+                        <li class="active"><a href="@Url.Action("Index", "Home")">HOME</a></li>
+                        <li><a href="@Server.UrlDecode(Url.RouteUrl(routeValues: new { controller = "Home", action = "Index", id="#about" }))">ABOUT</a></li>
+                        <li><a href="@Server.UrlDecode(Url.Action(Url.RouteUrl(new { controller = "Home", action = "Index" }) + "#resume"))">RESUME</a></li>
+                        <li><a href="@Server.UrlDecode(Url.RouteUrl(routeValues: new { controller = "Home", action = "Index", id="#works" }))">PORTFOLIO</a></li>
+                        <li><a href="@Url.Action("Blog", "Home")">BLOG</a></li>
+                        <li><a href="@Server.UrlDecode(Url.RouteUrl(routeValues: new { controller = "Home", action = "Index", id="#contact" }))">CONTACT ME</a></li>                       
+                    </ul>
+                </nav>
+            </div>
+        </div>   
+    <div class="body-content">
+        @RenderBody()
+        
+    </div>
+    <div class="clearfix"></div>
+    <footer class="footer">
+        <div class="footer-socials">
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+        </div>
+    </footer>  
+   <!--Scripts-->
+    <script src="~/assets/js/jquery-2.1.0.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/jquery.bxslider.js"></script>
+    <script src="~/assets/js/mooz.scripts.min.js"></script>
+    <script src="~/assets/js/plugins/scrollto/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script src="~/assets/js/plugins/scrollto/jquery.localscroll-1.2.7-min.js"></script>
+    <script src="~/assets/js/plugins/easing/jquery.easing.min.js"></script>
+    <script src="~/assets/js/plugins/parallax/jquery.parallax-1.1.3.js"></script>
+    <script src="~/assets/js/plugins/isotope/imagesloaded.pkgd.js"></script>
+    <script src="~/assets/js/plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/assets/js/plugins/wow/wow.js"></script>
+    <script src="~/assets/js/plugins/waypoints/waypoints.min.js"></script>
+    <script src="~/assets/js/plugins/parsley/parsley.min.js"></script>
+    <script src="~/assets/js/plugins/easypiechart/jquery.easypiechart.min.js"></script>
+    <script src="~/assets/js/plugins/magnific/jquery.magnific-popup.min.js"></script>
+    <script src="~/assets/js/plugins/looper/looper.min.js"></script>
+    @*<script src="~/assets/js/loop.js"></script>*@
+    @RenderSection("scripts", required: false)
+    
+</body>
+</html>
+  
+

@@ -1,0 +1,179 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<csPortfolio3.Models.Post>
+
+@{
+    Layout = "~/Views/Shared/_blogLayout.cshtml";
+
+}
+<head>
+    <link href="~/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/assets/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+    <link href="~/assets/css/mystyles.css" rel="stylesheet" />
+    <link href="~/assets/css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="~/assets/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container1">
+        <header>
+            <h1 style="font-weight:100">Welcome to my blog...</h1>
+        </header>
+        <section class="main-slider">
+            <div class="bx-wrapper">
+                <ul class="bxslider">
+                    <li><div class="slider-item"><img src="~/assets/img/photo-1441109296207-fd911f7cd5e5 (1).jpg" class="img-responsive" title="Funky roots" /><h2><a href="post.html" title="Vintage-Inspired Finds for Your Home">Scroll down to see my posts</a></h2></div></li>
+                    <li><div class="slider-item"><img src="~/assets/img/mac-glasses (1).jpg" title="Funky roots" /><h2><a href="post.html" title="Vintage-Inspired Finds for Your Home">Built using MVC, C#, and SQL </a></h2></div></li>
+                    <li><div class="slider-item"><img src="~/assets/img/mac-phone-desk.jpg" title="Funky roots" /><h2><a href="post.html" title="Vintage-Inspired Finds for Your Home">Check out my portfolio too, linked above</a></h2></div></li>
+                </ul>
+            </div>
+            @if (Request.IsAuthenticated)
+            {
+                <div class="text-center">
+                    <div class="read-more text-center" style="display: inline; padding: 10px;"><a href="@Url.Action("Create","Posts")">Create Post</a></div><div class="read-more text-center" style="display: inline; padding: 10px;"><a href="@Url.Action("Index","Posts")">Admin Page</a></div>
+                </div>
+            }
+        </section>
+        <section>
+            <div>
+                <div class="row">
+                    <div class="col-md-8">
+                        @foreach (var post in Model)
+                        {
+                            <article class="blog-post">
+                                <div class="blog-post-image">
+                                    @if (post.MediaUrl != null)
+                                    {
+                                        <img class="img-responsive" src="@Url.Content(post.MediaUrl)" alt="" />
+                                    }
+                                </div>
+                                <div class="blog-post-body">
+                                    <h2>@post.Title</h2>
+                                    <div class="post-meta"><span>by Christina</span>/<span><i class="fa fa-clock-o"></i>@post.Created.LocalDateTime</span>/<span><i class="fa fa-comment-o"></i>@post.Comments.Count <a href="#"></a></span></div>
+                                    @if (post.Body.Length > 200)
+                                    {
+                                        <p class="wrapper">@Html.Raw(post.Body.Substring(0, 200))<span>...</span></p>
+                                    }
+                                    else
+                                    {
+                                        <p class="wrapper">@Html.Raw(post.Body)</p>
+                                    }
+                                    <div class="read-more"><a href="@Url.Action("Details","Posts", new { slug = post.Slug })">Details <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                                </div>
+                            </article>
+                        }
+                        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+                        @Html.PagedListPager(Model, page => Url.Action("Blog", new { page }))
+                    </div>
+
+                    <div class="col-md-4 sidebar-gutter">
+                        <aside>
+                            <!-- sidebar-widget -->
+                            <div class="sidebar-widget">
+                                <h3 class="sidebar-title">Blog Search</h3>
+                                <div class="widget-container">
+                                    <form action="@Url.Action("Blog","Home")">
+                                        <div class="input-group">
+                                            <input type="text" name="query" value="@ViewBag.Query" class="form-control">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" style="padding: 9.5px" type="submit">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                    <!-- /.input-group -->
+                                </div>
+                            </div>
+
+                            <!-- sidebar-widget -->
+                            <div class="sidebar-widget">
+                                <h3 class="sidebar-title">About Me</h3>
+                                <div class="widget-container widget-about">
+                                    <a href="post.html"><img src="~/assets/img/IMG_8803.JPG" alt=""></a>
+                                    <h4>Christina Simmons</h4>
+                                    <div class="author-title">Junior Full-Stack Developer</div>
+                                    <p>Thanks for viewing my blog. Check out my posts to see what I'm learning each week.</p>
+                                </div>
+                            </div>
+
+
+
+                            <!--sidebar widget-->
+
+                            <div class="sidebar-widget">
+                                <h3 class="sidebar-title">Featured Posts</h3>
+                                <div class="widget-container">
+                                    @foreach (var post in Model)
+                                    {
+                                        <article class="widget-post">
+                                            <div class="post-image">
+                                                @if (post.MediaUrl != null)
+                                                {
+                                                    <img class="img-responsive" src="@Url.Content(post.MediaUrl)" alt="" />
+                                                }
+                                            </div>
+                                            <div class="post-body">
+                                                <h2>@post.Title</h2>
+                                                <div class="post-meta">
+                                                    <span><i class="fa fa-clock-o"></i>@post.Created.LocalDateTime</span> <span><a href="post.html"><i class="fa fa-comment-o"> @post.Comments.Count</i></a></span>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    }
+                                </div>
+                            </div>
+
+                            <!-- sidebar-widget -->
+                            <div class="sidebar-widget">
+                                <h3 class="sidebar-title">Socials</h3>
+                                <div class="widget-container">
+                                    <div class="widget-socials">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-linkedIn"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- sidebar-widget -->
+                            @*<div class="sidebar-widget">
+                                    <h3 class="sidebar-title">Categories</h3>
+                                    <div class="widget-container">
+                                        <ul>
+                                            <li><a href="#">Fashion</a></li>
+                                            <li><a href="#">Art</a></li>
+                                            <li><a href="#">Design</a></li>
+                                            <li><a href="#">Featured</a></li>
+                                            <li><a href="#">Graphics</a></li>
+                                            <li><a href="#">Peoples</a></li>
+                                            <li><a href="#">Uncategorized</a></li>
+                                        </ul>
+                                    </div>
+                                </div>*@
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.container -->
+    </div>
+
+
+</body>
+
+@section scripts{
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#jpreOverlay').remove();
+            //$(".wrapper").dotdotdot({
+            //    //	configuration goes here
+            //    ellipsis: '... ',
+            //    wrap: 'word',
+            //    height: 10
+            //});
+        });
+    </script>
+
+}

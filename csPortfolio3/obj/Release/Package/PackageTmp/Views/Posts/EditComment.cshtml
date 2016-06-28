@@ -1,0 +1,75 @@
+﻿@model csPortfolio3.Models.Comment
+
+@{
+    Layout = "~/Views/Shared/_blogLayout.cshtml";
+
+}
+@{
+    ViewBag.Title = "EditComment";
+}
+<head>
+    <link href="~/assets/css/blog-home.css" rel="stylesheet" />
+    <link href="~/assets/css/mystyles.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="~/images/1454688627.ico">
+
+</head>
+<body>
+    <div class="container1">
+        <h2>EditComment</h2>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.PostId)
+            <div class="form-horizontal">
+                <h4>Comment</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.Id)
+                
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Body, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Body, new { htmlAttributes = new { @class = "form-control", id = "bodyEditor", rows = "5" } })
+                        @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Created.LocalDateTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Created.LocalDateTime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Created, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Updated.LocalDateTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Updated.LocalDateTime, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Updated, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UpdateReason, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.UpdateReason, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UpdateReason, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div>
+           <p class="read-more"><a href = "@Url.Action("Blog","Home")">Back to Blog</a></p> 
+            @*<div class="read-more"><a href="@Url.Action("Details", "Posts", new { slug = Model.Slug })">Back to Post</a></div>*@
+        </div>
+    </div>
+</body>

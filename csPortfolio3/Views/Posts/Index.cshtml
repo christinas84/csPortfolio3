@@ -1,0 +1,91 @@
+﻿@model IEnumerable<csPortfolio3.Models.Post>
+
+@{
+    Layout = "~/Views/Shared/_blogLayout.cshtml";
+
+}
+@{
+    ViewBag.Title = "Admin Page";
+}
+    <link href="~/assets/css/blog-home.css" rel="stylesheet" />
+    <link href="~/assets/css/mystyles.css" rel="stylesheet" />
+<link rel="icon" type="image/png" href="~/images/1454688627.ico">
+
+<div class="container">
+   <h2>@ViewBag.Title</h2> 
+    <h4>Posts List</h4>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Updated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Slug)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Body)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MediaUrl)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Published)
+            </th>*@
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Created.LocalDateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Updated.LocalDateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Slug)
+                </td>
+                <td>
+                    @*@Html.Raw(item.Body)*@
+                    @if (item.Body.Length > 200)
+                    {
+                        <p class="wrapper">@Html.Raw(item.Body.Substring(0, 200))<span>...</span></p>
+                    }
+                    else
+                    {
+                        <p class="wrapper">@Html.Raw(item.Body)</p>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MediaUrl)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.Published)
+                </td>*@
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { slug = item.Slug }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <div class="read-more" style="display: inline; padding: 10px;">
+        @Html.ActionLink("Create New", "Create")
+    </div><div class="read-more" style="display: inline; padding: 10px;">
+    @Html.ActionLink("Back to Blog", "Blog", "Home")
+</div> 
+    
+</div>

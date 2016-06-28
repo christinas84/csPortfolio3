@@ -12,6 +12,12 @@ namespace csPortfolio3
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapRoute(
+                name: "NewSlug",
+                url: "Blog/{slug}",
+                defaults: new { controller = "Posts", action = "Details", id = UrlParameter.Optional }
+            );
+
 
             routes.MapRoute(
                 name: "Default",

@@ -1,0 +1,81 @@
+﻿@model csPortfolio3.Models.Comment
+
+@{
+    Layout = "~/Views/Shared/_blogLayout.cshtml";
+}
+@{
+    ViewBag.Title = "Delete";
+}
+
+    <link href="~/assets/css/blog-home.css" rel="stylesheet" />
+    <link href="~/assets/css/mystyles.css" rel="stylesheet" />
+
+    <div class="container1">
+        <h2>Delete</h2>
+
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+            <h4>Comment</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Author.FirstName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Author.FirstName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Post.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Post.Title)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Body)
+                </dt>
+
+                <dd>
+                    @Html.Raw(Model.Body)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Created)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Created.LocalDateTime)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Updated)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Updated.LocalDateTime)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.UpdateReason)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UpdateReason)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            }
+        </div>
+    </div>

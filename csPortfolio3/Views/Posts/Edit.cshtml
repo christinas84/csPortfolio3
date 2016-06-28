@@ -1,0 +1,63 @@
+﻿@model csPortfolio3.Models.Post
+@{
+    Layout = "~/Views/Shared/_blogLayout.cshtml";
+
+}
+@{
+    ViewBag.Title = "Edit";
+}
+<head>
+    <link href="~/assets/css/blog-home.css" rel="stylesheet" />
+    <link href="~/assets/css/mystyles.css" rel="stylesheet" />
+</head>
+<div class="container1">
+    <h3>Edit</h3>
+   
+@using (Html.BeginForm("Edit", "Posts", FormMethod.Post, new { enctype = "Multipart/form-data" }))
+{
+        @Html.AntiForgeryToken()        
+        <div class="form-horizontal">
+            <h2>Post</h2>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.Id)
+            <input type="hidden" name="title" value="@Model.Title" />
+            <input type="hidden" name="title" value="@Model.Slug" />           
+            <h2>
+                @Html.DisplayFor(model => model.Title)
+            </h2>     
+            <div class="form-group">
+                @Html.LabelFor(model => model.Body, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Body, new { htmlAttributes = new { @class = "form-control", id = "bodyEditor", rows = "5" } })
+                    @Html.ValidationMessageFor(model => model.Body, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.MediaUrl, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input name="image" type="file" class="form-control" id="fileUpload" />
+                    @*@Html.EditorFor(model => model.MediaUrl, new { htmlAttributes = new { @class = "form-control" } })*@
+                    @Html.ValidationMessageFor(model => model.MediaUrl, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    <div>
+        <div class="read-more"> @Html.ActionLink("Back to List", "Index")</div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/tinymce/tinymce.min.js"></script>
+    <script src="~/Scripts/tinymce/jquery.tinymce.min.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#bodyEditor').tinymce({});
+        });
+    </script>
+}

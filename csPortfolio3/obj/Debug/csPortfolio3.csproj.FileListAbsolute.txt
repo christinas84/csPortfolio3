@@ -72,3 +72,8 @@ c:\users\cesim\documents\visual studio 2015\Projects\csPortfolio3\csPortfolio3\b
 c:\users\cesim\documents\visual studio 2015\Projects\csPortfolio3\csPortfolio3\bin\SendGridMail.dll
 c:\users\cesim\documents\visual studio 2015\Projects\csPortfolio3\csPortfolio3\bin\System.Net.Http.Formatting.dll
 c:\users\cesim\documents\visual studio 2015\Projects\csPortfolio3\csPortfolio3\bin\System.Net.Http.Formatting.xml
+C:\Users\cesim\documents\visual studio 2015\Projects\csPortfolio3\csPortfolio3\bin\Owin.Security.Providers.dll
+C:\Users\cesim\documents\visual studio 2015\Projects\csPortfolio3\csPortfolio3\bin\PagedList.dll
+C:\Users\cesim\documents\visual studio 2015\Projects\csPortfolio3\csPortfolio3\bin\PagedList.Mvc.dll
+C:\Users\cesim\documents\visual studio 2015\Projects\csPortfolio3\csPortfolio3\bin\PagedList.xml
+C:\Users\cesim\documents\visual studio 2015\Projects\csPortfolio3\csPortfolio3\bin\PagedList.Mvc.xml

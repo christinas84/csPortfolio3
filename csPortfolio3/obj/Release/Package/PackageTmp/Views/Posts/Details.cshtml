@@ -1,0 +1,116 @@
+﻿@model csPortfolio3.Models.Post
+
+@{
+    Layout = "~/Views/Shared/_blogLayout.cshtml";
+}
+@{
+    ViewBag.Title = "Details";
+}
+    <link href="~/assets/css/blog-home.css" rel="stylesheet" />
+    <link href="~/assets/css/mystyles.css" rel="stylesheet" />
+<link rel="icon" type="image/png" href="~/images/1454688627.ico">
+
+
+    <div class="container1">
+        <h2>Details</h2>
+        <div class="col-md-8">
+            <article class="blog-post">
+                <div class="blog-post-image">
+                @if (Model.MediaUrl != null)
+                        {
+                          <img class="img-responsive" src="@Url.Content(Model.MediaUrl)" alt="" />
+                        }
+                    @*<a href="post.html"><img class="img-responsive" src="https://placebear.com/g/750/500" alt=""></a>*@
+                </div>
+                <div class="blog-post-body">
+                    <h2>@Model.Title</h2>
+                    <div class="post-meta"><span>by Christina</span>/<span><i class="fa fa-clock-o"></i>@Model.Created.LocalDateTime</span>/<span><i class="fa fa-comment-o"></i>@Model.Comments.Count</span></div>
+                    <p>@Html.Raw(Model.Body)</p>
+                    @*<div class="read-more"><a href="#">Continue Reading</a></div>*@
+                    @*<div class="read-more"><a href="@Url.Action("Details","Posts", new { slug = Model.Slug })">Details <span class="glyphicon glyphicon-chevron-right"></span></a></div>*@
+                </div>
+            </article>
+            <h4>Leave a Comment:</h4>
+            @if (System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                <form role="form" action="@Url.Action("CreateComment", "Posts")" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        <input type="hidden" name="postId" value="@Model.Id" style="">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="Body" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <p><button type="submit" class="btn btn-default" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Comment Posted"><i class="icon-location-arrow"></i>Submit</button></p>
+                    </div>
+                </form>
+            }
+            else {
+                <p>Please @Html.ActionLink("Login", "Login", "Account", new { returnUrl = Url.Action("Details", "Posts", new { slug = Model.Slug }) }, null) to leave a comment</p>
+                              }
+            <!--comment list-->
+            <!-- Comment -->
+            @foreach (var comment in Model.Comments)
+            {
+                <div class="media">
+                    <div class="media-body">
+                        <h4 class="media-heading">
+                            @comment.Author.DisplayName
+                            <small>@comment.Created.DateTime.ToLongDateString()</small>
+                        </h4>
+                        @comment.Body
+                    </div>
+                </div>
+                if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+                {
+                    <button class="btn btn-default" id="btnLeft">@Html.ActionLink("Edit comment", "EditComment", "Posts", new { id = @comment.Id }, null)</button>
+                    <button class="btn btn-default" id="btnRight">@Html.ActionLink("Delete comment", "DeleteComment", "Posts", new { id = @comment.Id }, null)</button>
+                    <div class="clearfix"></div>                }
+            }
+            <hr>
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="read-more" id="btnLeft">
+                @Html.ActionLink("Edit post", "Edit", "Posts", new { id = @Model.Id }, null)
+                </div>
+            }
+            <p>
+                <div class="read-more" id="btnRight"><a href="@Url.Action("Blog","Home")">Back to Blog</a></div>
+            </p>
+            </div>
+        <div class="col-md-4 sidebar-gutter">
+            <aside>
+                <!-- sidebar-widget -->
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-title">Blog Search</h3>
+                    <div class="widget-container">
+                        <form action="@Url.Action("Blog","Home")">
+                            <div class="input-group">
+                                <input type="text" name="query" value="@ViewBag.Query" class="form-control">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" style="padding: 9.5px" type="submit">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                        <!-- /.input-group -->
+                    </div>
+                </div>
+             <!-- sidebar-widget -->
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-title">Socials</h3>
+                    <div class="widget-container">
+                        <div class="widget-socials">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-linkedIn"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                    </div>
+                </div>               
+            </aside>
+        </div>
+    </div> 
+   

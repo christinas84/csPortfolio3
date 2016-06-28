@@ -13,6 +13,7 @@ using System.Net.Mail;
 
 namespace csPortfolio3.Controllers
 {
+    [RequireHttps]
     public class ContactController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -44,35 +45,7 @@ namespace csPortfolio3.Controllers
         // POST: Contact/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Email,Message,Phone,Sendtime")] Contact contact)
-        {
-            contact.Sendtime = DateTime.Now;
-
-            //create the email object first, then add the properties
-            SendGrid.SendGridMessage myMessage = new SendGridMessage();
-            myMessage.AddTo(ConfigurationManager.AppSettings["ContactEmail"]);
-            myMessage.From = new MailAddress(contact.Email, contact.Name);
-            myMessage.Subject = "New Personal Contact Email";
-            myMessage.Text = contact.Message;
-
-            //create a Web transport using Api key
-            var transportWeb = new Web(ConfigurationManager.AppSettings["APIKey"]);
-            //send the email
-            transportWeb.DeliverAsync(myMessage);
-
-            if (ModelState.IsValid)
-            {
-                //db = database ContactMessage = table this will add the message to the table save and redirect to "action" 
-                contact.Success = true;
-                db.Contact.Add(contact);
-                db.SaveChanges();
-                return RedirectToAction("Index", "Home", routeValues: new { cont = contact });
-            }
-
-            return View();
-        }
+       
         // GET: Contact/Edit/5
         public ActionResult Edit(int? id)
         {
