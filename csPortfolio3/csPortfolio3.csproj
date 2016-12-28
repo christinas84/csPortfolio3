@@ -421,6 +421,7 @@
     <Content Include="assets\videos\motion.webm" />
     <Content Include="private.config" />
     <Content Include="Christina Simmons %282%29.pdf" />
+    <Content Include="CesResume %282%29.pdf" />
     <None Include="Properties\PublishProfiles\cesimmons.pubxml" />
     <Content Include="resumeCES.pdf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
